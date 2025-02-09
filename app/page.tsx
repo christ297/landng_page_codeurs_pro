@@ -1,101 +1,319 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
+import styles from "./page.module.css";
+import { Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className={styles.main}>
+      {/* Hero Section */}
+      <motion.header
+        className={styles.hero}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <div className={styles.heroContent}>
+          <motion.img
+            src="c1.jpeg"
+            alt="Codeurs Pro Logo"
+            className={styles.logo}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          />
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 1 }}
+          >
+            Bienvenue chez <span className={styles.highlight}>Codeurs Pro</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            Rejoignez la communauté pour apprendre, partager et évoluer dans le développement.
+          </motion.p>
+          <motion.a
+            href="https://wa.me/+22897282900"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.joinButton}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 1 }}
+          >
+            Rejoindre la communauté | Contactez-Nous
+          </motion.a>
+        </div>
+      </motion.header>
+      <motion.section className={styles.info}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <h2>{"Qu'est ce que Codeurs Pro ?"}</h2>
+        <p>{"Nous sommes une communauté dynamique dédiée à l'apprentissage, au partage de connaissances et à l'évolution dans le monde du développement.Nous regroupons des passionnés de technologie qui souhaitent améliorer leurs compétences, que ce soit dans le développement web, la cybersécurité, l'intelligence artificielle,ou tout autre domaine du génie logiciel."}</p>
+        <h2>Notre Mission</h2>
+        <p>{"Encourager la collaboration, favoriser l'innovation et créer un environnement d’apprentissage enrichissant pour tous nos membres.Si vous êtes passionné par la technologie et souhaitez évoluer aux côtés de professionnels et d'experts du secteur, vous êtes au bon endroit !"}</p>
+          <motion.a
+            href="https://wa.me/+22897282900"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.joinButton}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 1 }}
+          >
+            Rejoindre la communauté
+          </motion.a>
+      </motion.section>
+      {/* Groupes */}
+      <motion.section
+        className={styles.section}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <h2>Nos Groupes</h2>
+        <div className={styles.grid}>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h3>Cybersécurité</h3>
+            <p>Apprenez à protéger les systèmes et les données contre les cyberattaques. Explorez les techniques de sécurisation des réseaux, la cryptographie et les meilleures pratiques en matière de sécurité.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h3>Java</h3>
+            <p>{"Maîtrisez l'un des langages de programmation les plus populaires. Découvrez les concepts de POO, les frameworks comme Spring, et développez des applications robustes et scalables."}</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <h3>PHP</h3>
+            <p>Plongez dans le développement web avec PHP. Apprenez à créer des sites dynamiques, à utiliser des frameworks comme Laravel, et à interagir avec des bases de données.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          > 
+            <h3>Linux</h3>
+            <p>Explorez le monde de Linux. Apprenez à administrer des systèmes, à écrire des scripts shell, et à utiliser des outils open-source pour optimiser votre workflow.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <h3>HTML / CSS / JS</h3>
+            <p>Démarrez avec les bases du développement web. Créez des sites web interactifs et responsives en maîtrisant HTML, CSS, et JavaScript.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <h3>WordPress</h3>
+            <p>Découvrez comment créer et gérer des sites web avec WordPress. Apprenez à personnaliser des thèmes, à développer des plugins, et à optimiser les performances.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >
+            <h3>Python</h3>
+            <p>{"Apprenez Python, un langage polyvalent utilisé pour le web, l'analyse de données, l'automatisation, et bien plus encore. Découvrez des librairies comme Django, Flask, et Pandas."}</p>
+          </motion.div>
+        </div>
+      </motion.section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Ambassadeurs */}
+      <motion.section
+        className={styles.section}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <h2>Nos Ambassadeurs</h2>
+        <div className={styles.grid}>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <h3>Jean Dupont</h3>
+            <p>{"Expert en cybersécurité avec plus de 10 ans d'expérience. Jean partage ses connaissances sur les meilleures pratiques de sécurité et les dernières tendances en matière de protection des données."}</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h3>Marie Curie</h3>
+            <p>Développeuse Java passionnée, Marie est spécialisée dans les architectures microservices et les applications cloud-native. Elle anime régulièrement des ateliers sur Spring Boot et Kubernetes.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <h3>Pierre Martin</h3>
+            <p>Spécialiste en développement web, Pierre est un fervent défenseur de WordPress. Il aide les membres à créer des sites web performants et sécurisés.</p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Conférences */}
+      <motion.section
+        className={styles.info}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <h2>Nos Conférences</h2>
+        <div className={styles.conference}>
+          <motion.img
+            src="t0.png"
+            alt="Conférence UCAO"
+            className={styles.conferenceImage}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          />
+          <motion.img
+            src="c1_1.jpg"
+            alt="Conférence UCAO"
+            className={styles.conferenceImage}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          />
+          <motion.p
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
+            {"Nous avons organisé des conférences à l'UCAO sur des sujets d'actualité comme l'Intelligence Artificielle et la Cybersécurité. Ces événements ont rassemblé des experts et des passionnés pour partager leurs connaissances et expériences."}
+          </motion.p>
+        </div>
+      </motion.section>
+
+      {/* Ressources */}
+      <motion.section
+        className={styles.section}
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2>Ressources pour Apprendre</h2>
+        <div className={styles.grid}>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h3>Programmation en Python</h3>
+            <p>Découvrez les bases de Python et ses applications dans divers domaines.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h3>Développement Java moderne</h3>
+            <p>Apprenez à développer des applications modernes avec Java.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <h3>Cybersécurité pour développeurs</h3>
+            <p>Protégez vos applications des vulnérabilités courantes.</p>
+          </motion.div>
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <h3>Frameworks PHP avancés</h3>
+            <p>Maîtrisez les frameworks PHP pour développer des applications web robustes.</p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Footer */}
+      <motion.footer
+      className={styles.footer}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+    >
+      <div className={styles.footerContent}>
+        <p>© {new Date().getFullYear()} Codeurs Pro. Tous droits réservés.</p>
+        <div className={styles.socialLinks}>
+          <a href="https://wa.me/+22897282900" target="_blank" rel="noopener noreferrer">
+            <MessageCircle size={24} />
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://facebook.com/codeurspro" target="_blank" rel="noopener noreferrer">
+            <Facebook size={24} />
+          </a>
+          <a href="https://twitter.com/codeurspro" target="_blank" rel="noopener noreferrer">
+            <Twitter size={24} />
+          </a>
+          <a href="https://www.linkedin.com/company/codeurs-pro/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={24} />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </motion.footer>   
+  </main>
   );
 }

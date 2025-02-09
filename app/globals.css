@@ -1,21 +1,110 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* page.module.css 
+.main {
+  font-family: 'Arial', sans-serif;
+  padding: 2rem;
+  background-color: #f9f9f9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  color: white;
+  border-radius: 12px;
+}
+
+.cta {
+  background-color: #ff7f50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.video {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.section {
+  margin: 3rem 0;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+  transform: translateY(-10px);
+}
+*/
+ul {
+  list-style-type: disc;
+  margin: 1rem 0 0 2rem;
+}
+
+p {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a {
+  font-size: large;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Pour les écrans de 768px ou moins (tablettes et téléphones) */
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 24px; /* Réduit la taille de la police des paragraphes */
+  }
+
+  h2 {
+    font-size: 26px; /* Réduit la taille de la police des titres */
+  }
+
+  a {
+    font-size: 1.2rem; /* Réduit la taille des liens */
+  }
+
+  ul {
+    margin-left: 1.5rem; /* Ajuste la marge à gauche pour les petits écrans */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Pour les écrans de 480px ou moins (téléphones portables) */
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 20px; /* Réduit encore la taille des paragraphes */
+  }
+
+  h2 {
+    font-size: 22px; /* Réduit encore la taille des titres */
+  }
+
+  a {
+    font-size: 1rem; /* Ajuste la taille des liens pour les petits écrans */
+  }
+
+  ul {
+    margin-left: 1rem; /* Réduit la marge à gauche pour les plus petits écrans */
+  }
 }
+
+/*
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #2a2a72;
+  color: white;
+}
+*/

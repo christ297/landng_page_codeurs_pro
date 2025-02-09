@@ -1,0 +1,218 @@
+.main {
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    background-color: #f6f1f1;
+    color: #000000;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: black;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+  
+  
+  .heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: #f7f1f1;
+    font-weight: bold;
+  }
+  
+  .joinButton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #198eb1;
+    color: rgb(252, 247, 247);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .joinButton:hover {
+    background-color: #f4f7f8;
+    color: #198eb1;
+  }
+  
+  .section {
+    margin: 3rem 0;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info {
+    margin: 3rem 0;
+    background-color: #0d0d0d;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info p {
+    color: #f6f2f2;
+  }
+  
+  .info h2 {
+    color: #f6f2f2;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 8.5rem;
+  }
+  
+  .card {
+    background: #000;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+  }
+  
+  .card:hover {
+    background: #333;
+    transform: scale(1.05);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    color: #198eb1;
+  }
+  
+  .card p {
+    margin: 0.5rem 0 0;
+    font-size: 20px;
+  }
+  
+  .conference {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .conferenceImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+    color: white;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .socialLinks a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLinks a:hover {
+    color: #198eb1;
+  }
+  
+  /* Media Queries pour la responsivité */
+  
+  /* Pour les écrans de 768px ou moins (tablettes et téléphones) */
+  @media screen and (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+  
+    .joinButton {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .conference {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .conferenceImage {
+      width: 80%;
+      max-width: 400px;
+    }
+  
+    .footer {
+      padding: 1.5rem;
+    }
+  
+    .logo {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+  
+  /* Pour les écrans de 480px ou moins (téléphones portables) */
+  @media screen and (max-width: 480px) {
+    .hero {
+      padding: 1.5rem 0.5rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .joinButton {
+      padding: 0.8rem 0rem;
+    }
+  
+    .footer {
+      padding: 1rem;
+    }
+  
+    .socialLinks {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  
