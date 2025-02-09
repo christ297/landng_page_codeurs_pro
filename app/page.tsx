@@ -164,37 +164,39 @@ export default function Home() {
       >
         <h2>Nos Ambassadeurs</h2>
         <div className={styles.grid}>
-          <motion.div
-            className={styles.card}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h3>Jean Dupont</h3>
-            <p>{"Expert en cybersécurité avec plus de 10 ans d'expérience. Jean partage ses connaissances sur les meilleures pratiques de sécurité et les dernières tendances en matière de protection des données."}</p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h3>Marie Curie</h3>
-            <p>Développeuse Java passionnée, Marie est spécialisée dans les architectures microservices et les applications cloud-native. Elle anime régulièrement des ateliers sur Spring Boot et Kubernetes.</p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h3>Pierre Martin</h3>
-            <p>Spécialiste en développement web, Pierre est un fervent défenseur de WordPress. Il aide les membres à créer des sites web performants et sécurisés.</p>
-          </motion.div>
-        </div>
+  <motion.div
+    className={styles.card}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  >
+    <h3>{"Ce qu'ils gagnent"}</h3>
+    <ul>
+      <li>Développement de leur réseau professionnel</li>
+      <li>Accès privilégié à des événements et ressources</li>
+      <li>Visibilité accrue dans la communauté</li>
+      <li>Opportunités de collaboration sur des projets innovants</li>
+    </ul>
+  </motion.div>
+
+  <motion.div
+    className={styles.card}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+  >
+    <h3>{"Ce qu'ils doivent faire"}</h3>
+    <ul>
+      <li>Partager leur expertise via des ateliers et présentations</li>
+      <li>Accompagner les membres sur leurs projets techniques</li>
+      <li>Promouvoir la communauté et ses valeurs</li>
+      <li>Inspirer et guider les membres en tant que référence technique</li>
+    </ul>
+  </motion.div>
+</div>
+
       </motion.section>
 
       {/* Conférences */}
