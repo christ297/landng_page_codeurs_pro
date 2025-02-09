@@ -301,7 +301,7 @@ export default function Home() {
       <div className={styles.footerContent}>
         <p>© {new Date().getFullYear()} Codeurs Pro. Tous droits réservés.</p>
         <div className={styles.socialLinks}>
-          <a href="https://wa.me/+22897282900" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/+22897282900\?text=Je veux rejoindre codeurs pro " target="_blank" rel="noopener noreferrer">
             <MessageCircle size={24} />
           </a>
           <a href="https://facebook.com/codeurspro" target="_blank" rel="noopener noreferrer">
